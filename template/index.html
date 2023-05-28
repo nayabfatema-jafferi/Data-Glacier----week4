@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+    <body>
+        <div class="login">
+        <h1>Predict Insurance Cost</h1>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="text" name="age" placeholder="Age" required="required" />
+            
+            <input type="text" name="Sex" placeholder="Sex-male:1,female:0" required="required" />
+            <input type="text" name="bmi" placeholder="BMI" required="required" />
+
+            <input type="text" name="children" placeholder="Children-yes:1,no:0" required="required" />
+    
+            <input type="text" name="smoker" placeholder="smoker-yes:1,no:0" required="required" />
+            <input type="text" name="region" placeholder="region - northeast:0,northwest:1,southeast:2,southwest:3" required="required" />
+    
+            <button type="submit" class="btn-info">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       {{ prediction_text }}
+    
+     </div>
+     
+    </body>
+    </html>
+</head>
+<body>
+    
+</body>
+</html>
